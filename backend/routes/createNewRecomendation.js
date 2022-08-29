@@ -2,14 +2,25 @@ const express = require('express');
 const route = express.Router();
 const Recomendation = require('../models/recomendationModal');
 
-route.get('/allData', async (req, res) => {
-    try{
-        const allRecomendations = await Recomendation.find();
-        res.json(allRecomendations);
-    }catch(err){
-        console.log(err)
+app.get('/allData', async (req, res) => {
+    if(req.query.search){
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi')
+        const searchedRecomendations = await Recomendation.find({recomendationName: regex});
+        try{
+            res.status(200).json(searchedRecomendations);
+        }catch(err){
+            res.send(err)
+        }
+    } else {
+        const recomendations = await Recomendation.find();
+        res.json(recomendations)
     }
+    
 })
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 route.post('/creation', async (req, res) => {
     const newRecomendation = new Recomendation({
@@ -21,9 +32,11 @@ route.post('/creation', async (req, res) => {
 
     try{
         newRecomendation.save();
+        res.status(200).send("success");
 
     } catch(error) {
-        res.send({error: error});
+        res.status(500).send(error);
+
     }
 
 });
