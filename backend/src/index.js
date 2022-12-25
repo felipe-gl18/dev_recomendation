@@ -15,8 +15,9 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://devrecomendation-frontend.herokuapp.com")
-    app.use(cors());
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "OPTIONS,POST,GET");
+    res.setHeader( "Access-Control-Allow-Headers", "Content-Type",)
     next();
   });
 
