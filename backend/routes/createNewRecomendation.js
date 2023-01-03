@@ -57,5 +57,3 @@ route.get('/:_id', async (req, res) => {
 })
 
 module.exports = route;
-
-module.exports = route;

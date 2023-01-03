@@ -9,7 +9,7 @@ const Home = () => {
   const [searchedRecomendation, setSearchedRecomendation] = useState();
 
   useEffect(() => {
-    fetch(`https://devrecomendation-backend.herokuapp.com/recomendations/allData`)
+    fetch(`http://localhost:8000/recomendations/allData`)
     .then((res) => res.json())
     .then((json) => {
        setAllRecomendations(json)
@@ -17,7 +17,7 @@ const Home = () => {
   }, [])
 
   function handleSearchedRecomendation(newText){
-    fetch(`https://devrecomendation-backend.herokuapp.com/recomendations/allData/${newText}`)
+    fetch(`http://localhost:8000/recomendations/allData/${newText}`)
     .then((res) => res.json())
     .then((json) => {
        setAllRecomendations(json)

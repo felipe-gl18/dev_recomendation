@@ -7,7 +7,7 @@ export default function RecomendationPage({ route }){
     const [recomendation, setRecomendation] = useState([])
 
     useEffect(() => {
-        fetch(`https://devrecomendation-backend.herokuapp.com/recomendations/${id}`)
+        fetch(`http://localhost:8000/recomendations/${id}`)
         .then((res) => res.json())
         .then((json) => {
            setRecomendation(json)

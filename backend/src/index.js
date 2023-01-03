@@ -26,6 +26,6 @@ app.use('/recomendations', recomendations);
 
 app.use(cors());
 
-mongoose.connect('mongodb+srv://felipegadelha:oJM5ENPio0I4iTVR@cluster0.kev4g.mongodb.net/dev_recomendation?retryWrites=true&w=majority');
+mongoose.connect(process.env.DATABASE_URL);
 
-app.listen(process.env.PORT || 8000, () => console.log(`the server is running at ${process.env.PORT}`))
+app.listen(8000)

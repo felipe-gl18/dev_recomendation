@@ -12,7 +12,7 @@ export default function CreateRecomendation(){
     const [recomendationLink, setRecomendationLink] = useState("");
 
     function handleNewRecomendtion(){
-        fetch(`https://devrecomendation-backend.herokuapp.com/recomendations/creation`,{
+        fetch(`http://localhost:8000/recomendations/creation`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
