@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot home 1`] = `
+<main>
+  <div
+    className="apresentation"
+  >
+    <div
+      className="apresentationText"
+    >
+      <h1>
+        <strong>
+          DEV
+        </strong>
+        <br />
+        RECOMENDATION
+      </h1>
+      <p>
+        HERE YOU CAN FIND OUT WHERE AND HOW TO 
+        <br />
+         ACCESS THE BEST CONTENTS FOR 
+        <br />
+         DEVOLOPERS
+      </p>
+    </div>
+  </div>
+  <form
+    action="/"
+    method="GET"
+  >
+    <input
+      id="search"
+      name="search"
+      placeholder="Search for some recomendation"
+      type="text"
+    />
+    <button>
+      <i
+        className="fas fa-search"
+      />
+    </button>
+  </form>
+  <div
+    className="recomendations"
+  >
+    <div
+      className="recomendations-item"
+    >
+      <div
+        className="recomendations-item-image"
+      >
+        <img
+          alt="illustration"
+          src="/imgs/main-photo.jpg"
+        />
+      </div>
+      <div
+        className="recomendations-item-content"
+      >
+        <p
+          className="recomendations-item-title"
+        >
+          React advenced course
+        </p>
+        <p
+          className="recomendations-item-description"
+        >
+          A react course with advanced content
+        </p>
+        <button>
+          <a>
+            See more
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+`;

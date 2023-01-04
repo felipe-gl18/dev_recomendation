@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot recomendations 1`] = `
+<div
+  className="div-form"
+>
+  <div
+    className="div-form-inputs"
+  >
+    <p>
+      <strong>
+        DEV
+      </strong>
+      RECOMENDATION
+    </p>
+    <form
+      action="/recomendations/creation"
+      method="post"
+    >
+      <div
+        className="input-recomendation-name"
+      >
+        <label
+          htmlFor="recomendationName"
+        >
+          Recomendation's name
+        </label>
+        <input
+          id="recomendationName"
+          name="recomendationName"
+          placeholder="PHP course"
+          type="text"
+        />
+      </div>
+      <div
+        className="input-recomendation-author"
+      >
+        <label
+          htmlFor="recomendatioAuthor"
+        >
+          Recomendation's author
+        </label>
+        <input
+          id="recomendationAuthor"
+          name="recomendationAuthor"
+          placeholder="Paul Silv"
+          type="text"
+        />
+      </div>
+      <div
+        className="input-recomendation-description"
+      >
+        <label
+          htmlFor="recomendationDescription"
+        >
+          Recomendation's description
+        </label>
+        <textarea
+          id="recomendationDescription"
+          maxLength="150"
+          name="recomendationDescription"
+          placeholder="The best course to learn basic concepts about php"
+        />
+      </div>
+      <div
+        className="input-recomendation-link"
+      >
+        <label
+          htmlFor="recomendationLink"
+        >
+          Recomendation's link
+        </label>
+        <input
+          id="recomendationLink"
+          name="recomendationLink"
+          type="text"
+        />
+      </div>
+      <div
+        className="input-recomendation-submit"
+      >
+        <input
+          id="recomendationSubmit"
+          name="recomendationSubmit"
+          type="submit"
+          value="Create"
+        />
+      </div>
+    </form>
+  </div>
+  <div
+    className="div-form-text"
+  >
+    <div
+      className="div-form-text-content"
+    >
+      <p>
+        CREATED BY DEV TO DEV
+      </p>
+      <div
+        className="div-form-text-line"
+      />
+      <div
+        className="div-form-text-social"
+      >
+        <a
+          href="https://www.instagram.com/felipe.linog/"
+        >
+          <i
+            className="fab fa-instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/felipe-gadelha-273578207/"
+        >
+          <i
+            className="fab fa-linkedin"
+          />
+        </a>
+        <a
+          href=" https://wa.me/5588992048450/"
+        >
+          <i
+            className="fab fa-whatsapp-square"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

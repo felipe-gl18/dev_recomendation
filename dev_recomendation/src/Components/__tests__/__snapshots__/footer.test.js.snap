@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot footer 1`] = `
+<footer>
+  <p>
+     © felipe-gl18
+  </p>
+</footer>
+`;

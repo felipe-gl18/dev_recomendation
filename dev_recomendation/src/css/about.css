@@ -1,0 +1,74 @@
+.aboutme{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    
+    background: rgba(0, 0, 0, 0.9) url("/public/imgs/main-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+
+    margin: 100px auto 100px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.aboutme-content{
+    width: 90%;
+
+    margin-top: 30px 0px 30px;
+}
+
+.aboutme-content > h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+
+    margin: 50px auto 50px;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+}
+
+.profile{
+    margin-left: 15vw;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+    background-image: url('/public/imgs/my.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.aboutme-content > .middle > p{
+    width: 60%;
+    color: white;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.div-form-text-social{
+    margin-bottom: 40px;    
+}
+
+@media screen and (max-width: 800px){
+    .aboutme{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .aboutme{
+        width: 95%;
+    }
+    .aboutme-content > .middle > p{
+        font-size: 0.8rem;
+    }
+}

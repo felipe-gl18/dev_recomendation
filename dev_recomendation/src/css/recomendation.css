@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.recomendation{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 70vh;
+    
+    background: rgba(0, 0, 0, 0.9) url("/public/imgs/main-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+
+    margin: 100px auto 100px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.recomendation-content{
+    width: 90%;
+
+    margin-top: 100px;
+}
+
+.recomendation-content > h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+
+    margin: 50px auto 50px;
+}
+
+.recomendation-content > p{
+    color: white;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.recomendation-content > .link{
+    width: 150px;
+    height: 35px;
+    background-color: #23859A;
+    border: none;
+    outline: none;
+    margin: 50px auto 100px;
+    transition: 0.5s ease;
+}
+
+.recomendation-content > .link:hover{
+    background-color: #125969;
+}
+
+.recomendation-content > .link > a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.recomendation-content > .recomendationAuthor{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: #23859A;
+}
+
+@media screen and (max-width: 800px){
+    .recomendation{
+        width: 90%;
+    }
+}

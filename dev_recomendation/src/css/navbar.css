@@ -1,0 +1,118 @@
+strong{
+    color: #15C6DE;
+}
+
+header > nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-logo{
+    width: 300px;
+    line-height: 80px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.nav-logo > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: flex-end;
+    width: 75vw;
+
+    list-style: none;
+    line-height: 80px;
+
+    font-weight: bold;
+    font-size: small;
+}
+
+.nav-item{
+    margin: auto 2vw auto 2vw;
+}
+
+.nav-item > a{
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 0.75rem;
+    transition: 0.5s;
+}
+
+.menu-bars{
+    display: none;
+}
+
+.nav-item > a:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width: 564px){
+    .nav-items{
+        display: none;
+    }
+    .nav-logo{
+        width: 90%;
+        line-height: 80px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .menu-bars{
+        display: flex;
+        width: 10%;
+        height: 100%;
+        margin-right: 20px;
+        justify-content: flex-end;
+
+        background-image: url("/public/imgs/menu.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .menu-bars-deactived{
+        display: flex;
+        width: 10%;
+        height: 100%;
+        margin-right: 20px;
+        justify-content: flex-end;
+
+        background-image: url("/public/imgs/closeMenu.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .nav_actived{
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        color: white;
+        display: flex;
+        top: 80px;
+        flex-direction: column; 
+        width: 100%;
+        height: 45vh;
+        justify-content: center;
+        align-items: center;
+        animation: navBar 0.4s ease-in; 
+    }
+}
+
+@keyframes navBar {
+    from{
+        opacity: 0%;
+        right: -100%;
+    }to{
+        opacity: 100%;
+        right: 0%;
+    }
+}
+

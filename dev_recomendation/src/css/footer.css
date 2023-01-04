@@ -1,0 +1,11 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #070707;
+    color: white;
+    height: 80px;
+    font-family: 'Inter', sans-serif;
+
+}
