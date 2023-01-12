@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, View, Text, StyleSheet, Pressable, ScrollView} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {IPV4_ADDRESS} from '@env';
 
 export default function CreateRecomendation(){
 
@@ -12,7 +13,7 @@ export default function CreateRecomendation(){
     const [recomendationLink, setRecomendationLink] = useState("");
 
     function handleNewRecomendtion(){
-        fetch(`http://localhost:8000/recomendations/creation`,{
+        fetch(`http://${IPV4_ADDRESS}:8000/recomendations/creation`,{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 

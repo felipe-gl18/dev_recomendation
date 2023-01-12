@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable, Linking } from "react-native";
+import {IPV4_ADDRESS} from '@env'
 
 export default function RecomendationPage({ route }){
 
@@ -7,7 +8,7 @@ export default function RecomendationPage({ route }){
     const [recomendation, setRecomendation] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:8000/recomendations/${id}`)
+        fetch(`http://${IPV4_ADDRESS}:8000/recomendations/${id}`)
         .then((res) => res.json())
         .then((json) => {
            setRecomendation(json)

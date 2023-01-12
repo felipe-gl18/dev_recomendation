@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {ImageBackground, ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
 import Recomendations from "./recomendation";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {IPV4_ADDRESS} from '@env'
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
   const [searchedRecomendation, setSearchedRecomendation] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/recomendations/allData`)
+    fetch(`http://${IPV4_ADDRESS}:8000/recomendations/allData/`)
     .then((res) => res.json())
     .then((json) => {
        setAllRecomendations(json)
@@ -17,7 +18,7 @@ const Home = () => {
   }, [])
 
   function handleSearchedRecomendation(newText){
-    fetch(`http://localhost:8000/recomendations/allData/${newText}`)
+    fetch(`http://${IPV4_ADDRESS}:8000/recomendations/allData/${newText}`)
     .then((res) => res.json())
     .then((json) => {
        setAllRecomendations(json)
